@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route} from "react-router-dom";
+import HeaderComponent from "./Components/HeaderComponent/HeaderComponent";
+import AboutpageComponent from "./Pages/AboutpageComponent/AboutpageComponent";
+import HomepageComponent from "./Pages/HomepageComponent/HomepageComponent";
+import "./App.style.scss";
+import Products from "./Components/ProductComponents/Products";
+import SigninSignupPage from "./Pages/SigninSignupPage/SigninSignupPage";
+import { useUserContext } from "./Components/ContextComponent/UserContext";
+import ProductsDetail from "./Components/ProductComponents/ProductsDetail";
+// import { AuthProvider } from "./Components/AuthComponent/Auth";
+
 
 function App() {
+  const { user } = useUserContext();
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="grid-container">
+        {/* <AuthProvider> */}
+          <HeaderComponent user={user} />
+          <Routes>
+            <Route exact path="/" element={<HomepageComponent />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/products/:id" element={<ProductsDetail />} />
+            <Route path="/about" element={<AboutpageComponent />} />
+            <Route path="/signin" element={<SigninSignupPage />} />
+          </Routes>
+        {/* </AuthProvider> */}
+      </div>
     </div>
   );
 }

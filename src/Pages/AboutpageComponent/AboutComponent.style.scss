@@ -1,0 +1,40 @@
+
+.about{
+    display: flex;
+    flex-direction: column;
+    // background-color: #f7f8f9;
+    
+}
+.row2{
+    // max-width: 800px;
+    margin: auto;
+}
+.mt{
+    margin-top: 1rem;
+}
+.mb{
+    margin-bottom: 1rem;
+}
+
+p{
+    font-size: 1rem;
+}
+.ct{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: rgb(148, 53, 53);
+}
+.about-header{
+    // display: flex;
+    height: 20vh;
+
+    .back{
+        font-size: 1.5rem;
+    }
+}

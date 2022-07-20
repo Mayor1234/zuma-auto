@@ -1,0 +1,152 @@
+
+
+.row{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.logo{
+    width: 20%;
+}
+nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.nav{
+    width: 80%;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f6f7f8;
+    
+   
+   
+    
+    a{
+        color: #f7f8f9;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+    
+    }
+
+    ul{
+        list-style-type: none;
+    }
+
+    
+    .main-nav{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: 1rem 0; 
+
+
+
+       
+        
+       
+
+        .drop-down{
+            display: none;
+            position: relative;
+            
+            & li a{
+                text-transform: capitalize;
+            }
+
+            .drop-li{
+                padding: .5rem 0;
+                border-bottom: 1px solid #d2d3d461;
+
+                &:last-child{
+                    border-bottom: none;
+                }
+            } 
+
+        }
+
+        
+
+        
+        li{
+            margin: 0 1rem;
+            
+            
+            .a-bottom{
+                font-weight: bold;
+                color: #f6f7f8;
+                padding: .3rem 0;
+                cursor: pointer;
+                transition: all .40s ease-in-out;
+            }
+
+            .active-home{
+                border-bottom: 2px solid rgba(255, 0, 0, 0.687);
+            }
+
+
+            .a-bottom:hover{
+               color: rgba(255, 0, 0, 0.687);
+            }
+
+            .icon{
+                padding-top: .3rem;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+        }
+        .signInsignOut{
+            background-color:rgba(255, 0, 0, 0.687) ;
+            padding: .5rem 1rem;
+            border: 1px solid transparent;
+            text-transform: capitalize;
+            cursor: pointer;
+            border-radius: 2px;
+
+        
+
+            &:hover{
+                border: 1px solid rgba(255, 0, 0, 0.687);
+                background-color: #203040;
+                color: rgba(255, 0, 0, 0.687);
+                transition: all .40s ease-in-out;
+
+                a{
+                    color: rgba(255, 0, 0, 0.687);
+                    text-transform: capitalize;
+                }
+            }
+        }
+       
+        & li:hover .drop-down{
+            display: block;
+            position: absolute;
+            margin-left: -.3vw;
+            margin-top: 1vh;
+            padding: .5rem 0;
+            background-color: #203040;
+            color: rgba(255, 0, 0, 0.687);
+            z-index: 1;
+        }
+
+        & li:hover .drop-down .drop-content{
+            display: block;
+            margin-top: -.7vh;
+            color: rgba(255, 0, 0, 0.687);
+        }
+        .drop-content:hover{
+            color: rgba(255, 0, 0, 0.687);
+        }
+
+    }  
+
+}
+
+

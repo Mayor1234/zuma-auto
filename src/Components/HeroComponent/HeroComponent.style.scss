@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+}
+
+
+header{
+    background-position: no-repeat;
+    background-size: cover;
+    background-color: rgba(44, 83, 83, 0.7);
+    background-blend-mode: soft-light;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+
+    .hero{
+        color: #f7f8f9;
+        text-transform: capitalize;
+        font-weight: bolder;
+        position: absolute;
+        text-align: center;
+        top: 40%;
+        left: 10%;
+
+        span{
+            font-family: 'roboto', sans-serif;
+            display: flex;
+            font-size: 1.3rem;
+            align-self: flex-start;
+            color: #f7f8f9c3;
+        }
+        
+
+        h1{
+            font-size: 3rem;
+            padding-bottom: 1rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bolder;
+            text-align: center;
+        }
+    }
+
+
+}
+
+    
+
+@media screen and (max-width: 580px){
+    .hero{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 30rem;
+        margin-bottom: 1rem 0;
+   
+    }
+    
+}
+
+

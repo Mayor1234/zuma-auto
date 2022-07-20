@@ -1,0 +1,23 @@
+.btn{
+    border: none;
+    font-weight: bolder;
+    min-width: 165px;
+    padding: .8rem 1rem;
+    background-color: rgb(182, 50, 50);
+    color: #f6f7f8;
+    font-weight: bolder;
+    margin: 1rem 0;
+    border-radius: 3px;
+    cursor: pointer;   
+    border: 1px solid transparent;
+    transition: all .40s ease-in-out;
+    
+     
+
+    &:hover{
+        background-color: white;
+        color: rgb(182, 50, 50);
+        border: 1px solid rgb(182, 50, 50);
+       
+    }
+}

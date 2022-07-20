@@ -1,0 +1,160 @@
+.productDetailContainer {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%
+}
+
+.col3{
+    margin-right: 2rem;
+    max-width: 50%;
+    height: 100%;
+   
+    .productImg{
+        display: flex;
+        flex-direction: column;
+
+        .descripption{
+            background-color:#20262f;
+            color:#f7f8f9; 
+            border-bottom: 2px solid red;
+            padding: .8rem 2rem;
+            display: inline-block;
+            margin-bottom: .5rem;
+        }
+    }
+
+    .img-top{
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+         
+        h3{
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+
+.col1-5{
+    background-color: #20262f;
+    color: #f7f8f9;
+    padding: 2rem;
+    width: 35%;
+    height: 100%;
+    
+
+    .products-description{
+        padding: 2rem;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    dl{
+        margin-top: 0;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px
+    }
+    .dd-item{
+        display: flex;
+        width: 100%;
+    }
+
+    dt{
+        display: block;
+        width: 100%;
+        font-size: 11px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: normal;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        padding: 5px 10px 10px 10px;
+        border-bottom: 1px solid #ccc;
+        line-height: 1.5;
+        
+    }
+
+    dd{
+        display: block;
+        width: 100%;
+        font-size: 11px;
+        font-weight: normal;
+        color: #fff;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+        padding: 5px 10px 10px 10px;
+        border-bottom: 1px solid #ccc;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        
+        
+    }
+
+    .icon{
+        margin: 0 .5rem;
+    }
+
+    .card-body{
+        padding: 1.2rem;
+        width: 100%;
+        border: 1px solid #6a6b6c;
+
+        .card{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn-block{
+            display: block;
+            width: 100%;
+            padding: .8rem 0;
+        }
+    }
+    
+
+}
+
+
+.back{
+    background-color: rgb(6, 6, 6);
+    color: #f7f8f9;
+    // position: sticky;
+    // top: 3rem;
+    height: 8rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    font-size: 1rem;
+    opacity: 0.9;
+
+    .icon{
+        font-size: .8rem;
+        margin-right: .4rem;
+    }
+    h3{
+        font-size: 2rem;
+        margin-bottom: 1rem
+    }
+
+    a{
+        color: #f7f8f9;
+        &:hover{
+            color: rgba(255, 0, 0, 0.687);
+        }
+    }
+}
+
+.imgDetail{
+    max-width: 40rem;
+}
+
+
+.success{
+    color: rgb(40, 138, 40);
+}
+.error{
+    color: tomato;
+}
