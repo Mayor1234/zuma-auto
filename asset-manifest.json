@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/zuma-auto/static/css/main.d1cda0ec.css",
+    "main.js": "/zuma-auto/static/js/main.d465973f.js",
+    "static/js/787.c0925e3c.chunk.js": "/zuma-auto/static/js/787.c0925e3c.chunk.js",
+    "index.html": "/zuma-auto/index.html",
+    "main.d1cda0ec.css.map": "/zuma-auto/static/css/main.d1cda0ec.css.map",
+    "main.d465973f.js.map": "/zuma-auto/static/js/main.d465973f.js.map",
+    "787.c0925e3c.chunk.js.map": "/zuma-auto/static/js/787.c0925e3c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d1cda0ec.css",
+    "static/js/main.d465973f.js"
+  ]
+}
