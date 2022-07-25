@@ -2,23 +2,24 @@ import { FaAngleDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./HeaderComponent.style.scss";
 import { useUserContext } from "../ContextComponent/UserContext";
+import HamburgerComponent from "./HamburgerComponent";
+import { useState } from "react";
+import LogoComponent from "./LogoComponent";
 
 const HeaderComponent = ({ user }) => {
+  const [open, setOpen] = useState(false);
+  const { logOutUser } = useUserContext();
 
-  const {logOutUser} = useUserContext();
+  const handleClick = () => {
+    setOpen((toggleBurger) => !toggleBurger);
+  };
 
   return (
     <nav>
       <div className="nav-container row">
-        <div className="logo">
-          <h1>
-            <Link to="/">
-              <span>Z</span>uma <span>E</span>xpress
-            </Link>
-          </h1>
-        </div>
+        <LogoComponent />
         <div className="nav">
-          <ul className="main-nav">
+          <ul className={`main-nav ${!open ? "close" : ""}`}>
             <li>
               <Link to="/" className="active-home a-bottom">
                 Home
@@ -53,21 +54,25 @@ const HeaderComponent = ({ user }) => {
                 Contact us
               </Link>
             </li>
-
-            {user ? (
-              <div
-                className="signInsignOut a-bottom"
-                onClick={() => logOutUser()}
-              >
-                Sign Out
-              </div>
-            ) : (
-              <Link to="/signin">
-                <div className="signInsignOut a-bottom">Sign In</div>
-              </Link>
-            )}
+            <li>
+              {user ? (
+                <div
+                  className="signInsignOut a-bottom"
+                  onClick={() => logOutUser()}
+                >
+                  Sign Out
+                </div>
+              ) : (
+                <Link to="/signin">
+                  <div className="signInsignOut a-bottom">Sign In</div>
+                </Link>
+              )}
+            </li>
           </ul>
         </div>
+      </div>
+      <div className="hamburger" onClick={handleClick}>
+        <HamburgerComponent open={open} />
       </div>
     </nav>
   );

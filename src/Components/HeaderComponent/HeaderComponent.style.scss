@@ -5,35 +5,39 @@
     margin: 0 auto;
 }
 
-.logo{
-    width: 20%;
-}
+
 nav{
     position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 10;
+    border-bottom: 1px solid #959798;
 }
+
+
 
 .nav{
     width: 80%;
 }
+
+
 .nav-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #f6f7f8;
-    
+    // padding-bottom: 3rem;
    
+    
    
     
     a{
         color: #f7f8f9;
         text-align: center;
         text-decoration: none;
-        text-transform: uppercase;
-    
+        text-transform: capitalize;
+        padding: 2rem;
     }
 
     ul{
@@ -45,20 +49,16 @@ nav{
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        margin: 1rem 0; 
-
-
-
-       
+        // margin: 1rem 0; 
         
-       
 
+        
         .drop-down{
             display: none;
             position: relative;
             
             & li a{
-                text-transform: capitalize;
+                text-transform: capitalize; 
             }
 
             .drop-li{
@@ -72,19 +72,16 @@ nav{
 
         }
 
-        
-
-        
         li{
             margin: 0 1rem;
             
             
             .a-bottom{
-                font-weight: bold;
                 color: #f6f7f8;
                 padding: .3rem 0;
                 cursor: pointer;
                 transition: all .40s ease-in-out;
+
             }
 
             .active-home{
@@ -102,16 +99,17 @@ nav{
                 cursor: pointer;
             }
         }
+
         .signInsignOut{
+        
             background-color:rgba(255, 0, 0, 0.687) ;
             padding: .5rem 1rem;
             border: 1px solid transparent;
             text-transform: capitalize;
             cursor: pointer;
-            border-radius: 2px;
-
-        
-
+            border-radius: 3px;
+            width: 5rem;
+            
             &:hover{
                 border: 1px solid rgba(255, 0, 0, 0.687);
                 background-color: #203040;
@@ -128,12 +126,14 @@ nav{
         & li:hover .drop-down{
             display: block;
             position: absolute;
-            margin-left: -.3vw;
+            margin-left: -3vw;
             margin-top: 1vh;
             padding: .5rem 0;
             background-color: #203040;
             color: rgba(255, 0, 0, 0.687);
-            z-index: 1;
+            z-index: 30;
+
+           
         }
 
         & li:hover .drop-down .drop-content{
@@ -147,6 +147,44 @@ nav{
 
     }  
 
+
 }
 
+
+// _____________________________________________________
+
+@media only screen and (max-width: 768px) {
+   .nav{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        li{
+            padding: 18px 10px;
+        }
+        .main-nav{
+            display: flex;
+            justify-content: flex-start;
+            align-items: start;
+            flex-flow: column nowrap;
+            background-color: #131314;
+            width: 300px;
+            color: #333;
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding-top: 3.5rem;
+            height: 100vh;
+            margin: 0;
+            padding-left: 3rem; 
+            transform: translateX(0);
+            
+        }
+
+        .close{
+            transform: translateX(100%)
+        }
+        
+    }
+}
 

@@ -3,7 +3,7 @@ import "./SalesTeam.style.scss";
 import SalesTeamPreview from "./SalesTeamPreview";
 
 const SalesTeamComponent = () => {
-  const [teams, setTeams] = useState([
+  const teams = [
     {
       name: "Saviour Thompson",
       position: "Director",
@@ -28,7 +28,7 @@ const SalesTeamComponent = () => {
       imgTeam: "/images/teams/gift.jpg",
       id: 4,
     },
-  ]);
+  ];
 
   return (
     <div className="team-section">

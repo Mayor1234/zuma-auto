@@ -22,7 +22,6 @@ const ProductsDetail = () => {
 
   return (
     <div>
-      <BackComponent className="back" product={product} />
       <div className="productDetailContainer row">
         <div className="col3">
           <div className="productImg">

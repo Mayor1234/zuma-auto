@@ -5,6 +5,7 @@ import SalesTeamComponent from "../../Components/SalesTeamComponent/SalesTeamCom
 import ServiceComponent from "../../Components/ServiceComponent/ServiceComponent";
 // import SliderComponent from "../SliderComponent/SliderComponent";
 import FooterComponent from "../../Components/FooterComponents/FooterComponent";
+import AboutPageComponent from "../AboutpageComponent/AboutpageComponent";
 
 
 
@@ -13,7 +14,7 @@ const HomePageComponent = () => {
     <div>
       <HeroComponent />
       <ServiceComponent />
-      {/* <SliderComponent /> */}
+      <AboutPageComponent />
       <SalesTeamComponent />
       <BrandComponent />
       <FooterComponent />

@@ -76,7 +76,9 @@ const SignInPage = () => {
           <p>Sign in with Google</p>
         </div>
 
-        <p onClick={forgotPasswordHandler}>Forgot password?</p>
+        <p className="forgot" onClick={forgotPasswordHandler}>
+          Forgot password?
+        </p>
       </form>
     </div>
   );

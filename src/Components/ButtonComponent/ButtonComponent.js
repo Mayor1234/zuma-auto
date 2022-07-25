@@ -9,6 +9,7 @@ const ButtonComponent = ({ text, handleClick, solid}) => {
     
       <button className={solid} onClick={handleClick}> 
         {text}
+        
       </button>
   );
 
