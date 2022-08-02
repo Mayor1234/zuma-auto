@@ -5,13 +5,15 @@ import ButtonComponent from "../../Components/ButtonComponent/ButtonComponent";
 import { useUserContext } from "../../Components/ContextComponent/UserContext";
 import FormInput from "./FormInput";
 import { FaEyeSlash } from "react-icons/fa";
+import ClipLoader from 'react-spinners/ClipLoader';
+
 
 const SignInPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [show, setShow] = useState(false);
 
-  const { signInUser, forgotPassword } = useUserContext();
+  const { signInUser, forgotPassword, loading } = useUserContext();
 
   // Submit form
   const handleEmailAndPassword = (e) => {
@@ -32,7 +34,9 @@ const SignInPage = () => {
         <h3>I already have an account</h3>
         <span> Please sign in with your email and password</span>
       </div>
-      <form
+      { loading ?  (<div className="loader-spinner">
+        <ClipLoader color={'#203040'} size={100} /></div>):
+      (<form
         onSubmit={(e) => {
           handleEmailAndPassword(e);
         }}
@@ -79,7 +83,7 @@ const SignInPage = () => {
         <p className="forgot" onClick={forgotPasswordHandler}>
           Forgot password?
         </p>
-      </form>
+      </form>)}
     </div>
   );
 };

@@ -8,8 +8,8 @@ import LogoComponent from "./LogoComponent";
 
 const HeaderComponent = () => {
   const [open, setOpen] = useState(false);
-  const { logOutUser } = useUserContext();
-  const { user } = useUserContext();
+  const { logOutUser, user } = useUserContext();
+  
 
   const handleClick = () => {
     setOpen((toggleBurger) => !toggleBurger);

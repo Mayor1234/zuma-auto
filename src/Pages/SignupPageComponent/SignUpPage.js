@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./SignUpPage.style.scss";
 import ButtonComponent from "../../Components/ButtonComponent/ButtonComponent";
 import { useUserContext } from "../../Components/ContextComponent/UserContext";
 import FormInput from "../SigninPageComponent/FormInput";
 import { FaEyeSlash } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { ClipLoader } from "react-spinners";
 
 const SignUpPage = () => {
   const [name, setName] = useState("");
@@ -14,7 +14,7 @@ const SignUpPage = () => {
 
   // let navigate = useNavigate();
 
-  const { registerUser, user } = useUserContext();
+  const { registerUser, loading } = useUserContext();
 
   // // useEffect(() => {
   //   if (user) navigate("/");
@@ -37,7 +37,9 @@ const SignUpPage = () => {
         <h3>New user</h3>
         <span>Pls create a new account</span>
       </div>
-      <form
+      { loading ?  (<div className="loader-spinner">
+        <ClipLoader color={'#203040'} size={100} /></div>):
+      (<form
         onSubmit={(e) => {
           handleSubmit(e);
         }}
@@ -82,7 +84,7 @@ const SignUpPage = () => {
         </div>
 
         <ButtonComponent type="submit" solid="btn custom-btn" text="Sign Up" />
-      </form>
+      </form>)}
     </div>
   );
 };
