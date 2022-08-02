@@ -11,7 +11,6 @@ import {
   FaPaintRoller,
   FaScrewdriver,
 } from "react-icons/fa";
-import BackComponent from "../BackComponent/BackComponent";
 
 const ProductsDetail = () => {
   const { id } = useParams();
@@ -48,6 +47,7 @@ const ProductsDetail = () => {
               </dt>
               <dd>{product.name}</dd>
             </div>
+
             <div className="dd-item">
               <dt>
                 <FaScrewdriver className="icon" />
@@ -55,6 +55,7 @@ const ProductsDetail = () => {
               </dt>
               <dd>Series 5</dd>
             </div>
+
             <div className="dd-item">
               <dt>
                 <FaCalendarTimes className="icon" />
